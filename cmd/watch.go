@@ -68,7 +68,7 @@ func watch(ctx *cmdutil.Ctx, events chan file.Event, sig chan os.Signal, notifie
 	ctx.Log.SetFlags(log.Ltime)
 
 	if ctx.Env.ReadOnly {
-		return fmt.Errorf("[%s] environment is reaonly", colors.Green(ctx.Env.Name))
+		return fmt.Errorf("[%s] environment is read only", colors.Green(ctx.Env.Name))
 	}
 
 	ctx.Log.Printf(
